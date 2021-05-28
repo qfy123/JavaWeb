@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        /*
+        * Object形式的自定义对象
+        * var 变量名=new Object();     对象实例（空对象）
+        * 变量名.属性名=值；        定义一个属性
+        * 变量名.函数名=function(){}      定义一个函数
+        *
+        * 对象的访问
+        * 变量名.属性名/函数名();*/
+
+
+        var a=new Object();
+        a.name="金轮";
+        a.age=18;
+        a.wuhu=function (){
+            alert("对不起，我要起飞");
+        }
+        alert(a.age);
+        alert(a.name);
+        a.wuhu();
+
+        /*
+        * 花括号形式的自定义对象
+        * var 变量名={};    空对象
+        * var 变量名={
+        *   属性名：值，
+        *   属性名：值，
+        *   ……
+        *   每一个用逗号隔开，最后一个不要用逗号
+        *   函数名：function（）{}
+        *   };*/
+
+
+        var b={
+            name:"金轮",
+            age:18,
+            fun:function (){
+                alert("蓝buff一吃就起飞")
+            }
+        };
+        alert(b.age);
+        alert(b.name);
+        b.fun();
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

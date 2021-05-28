@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function onblurFunc() {
+            //console是控制台对象，专门用于来向浏览器的控制台打印输出，用于测试使用，log是打印的方法
+            console.log("静态注册onblur");
+        }
+
+        //动态注册
+        window.onload = function () {
+            var obj = document.getElementById("password");
+            obj.onblur = function () {
+                console.log("动态注册onblur");
+            }
+        }
+    </script>
+</head>
+<body>
+用户名：<input onblur="onblurFunc()" type="text"><br/>
+密码：<input id="password" type="text"><br/>
+
+</body>
+</html>

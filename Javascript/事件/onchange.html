@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function onchangeFunc() {
+            alert("静态onchange");
+        }
+
+        window.onload = function () {
+            var obj = document.getElementById("hero");
+            obj.onchange = function () {
+                alert("动态onchange");
+            }
+        }
+    </script>
+</head>
+<body>
+请选择你的英雄
+<select onchange="onchangeFunc()">
+    <option>无</option>
+    <option>肉蛋冲击</option>
+    <option>巨龙撞击</option>
+    <option>圣枪洗礼</option>
+    <option>无情铁手</option>
+    <option>孤立无援</option>
+</select><br/>
+请选择你的英雄
+<select id="hero">
+    <option>无</option>
+    <option>肉蛋冲击</option>
+    <option>巨龙撞击</option>
+    <option>圣枪洗礼</option>
+    <option>无情铁手</option>
+    <option>孤立无援</option>
+</body>
+</html>

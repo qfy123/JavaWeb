@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>10.表单.html</title>
+</head>
+<body>
+<!--什么是表单？表单就是html页面中，用来收集用户信息的所有元素集合，然后把这些信息发送给服务器-->
+<!--创建一个个人信息注册的表单界面，包含用户名、密码、确认密码。性别（单选）、兴趣爱好（多选）、国籍（下拉列表）、隐藏域、自我评价（多行文本域）、重置、提交
+
+form标签就是表单
+    <input type="text">:文本输入框
+    <input type="password">:密码输入框
+    <input type="radio">:单选框,name属性可以对其进行分组，同一个组的多个单选框只能选一个，比如性别，只能选男或女；checked="checked"可以指定默认选择的单选框
+    <input type="checkbox"/>：复选框，checked="checked"可以指定默认选择的
+    <section>：下拉列表框，<option>下拉列表框中的选项，对于option，可以用selected="selected"默认选中
+    <textarea rows="10" cols="20">:textarea表示多行文本输入框，rows设置可以显示几行的高度，cols设置每行可以显示几个字符宽度,起始标签和结束标签中间的内容是默认值
+    <input type="reset"/>:重置按钮，value修改按钮上的文本
+    <input type="submit"/>:提交按钮，value修改按钮上的文本
+    <input type="button" value="123">:按钮，value修改按钮上的文本
+    <input type="file"/>:文件上传域
+    <input type="hidden"/>:隐藏域，当我们要发送某些信息，而这些信息不需要用户参与，就可以使用隐藏域，提交时也会提交给服务器-->
+<form>
+    <h1 align="center">用户注册</h1>
+    <table align="center">
+        <tr>
+            <td> 用户名称：</td>
+            <td><input type="text"/><br/></td>
+        </tr>
+        <tr>
+            <td>用户密码：</td>
+            <td><input type="password" maxlength="18"/><br/></td>
+        </tr>
+        <tr>
+            <td>确认密码：</td>
+            <td><input type="password" maxlength="18"/><br/></td>
+        </tr>
+        <tr>
+            <td>性别：</td>
+            <td><input type="radio" name="sex">男
+                <input type="radio" name="sex"/>女
+                <br/></td>
+        </tr>
+        <tr>
+            <td>兴趣爱好：</td>
+            <td><input type="checkbox"/>吃饭
+                <input type="checkbox"/>睡觉
+                <input type="checkbox"/>王者<br/>
+            </td>
+        </tr>
+        <tr>
+            <td>国籍：</td>
+            <td><select>
+                <option>--请选择国籍--</option>
+                <option>中国</option>
+                <option>美国</option>
+                <option>日本</option>
+            </select><br/></td>
+        </tr>
+        <tr>
+            <td>自我评价：</td>
+            <td><textarea rows="10" cols="20">默认值</textarea></td>
+        </tr>
+        <tr>
+            <td><input type="reset"/></td>
+            <td><input type="submit"/></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

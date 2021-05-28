@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        //获取输入框的内容，验证是否合法（包含字母、数字、下划线，长度为5到12位）
+        function onclickFunc(){
+            //当操作一个标签的时候，先获取这个标签的对象
+            var username=document.getElementById("username");
+            var usernamespan=document.getElementById("usernamespan");
+
+            var text = username.value;//得到了输入框的输入的内容
+            //如何验证输入的内容符合某个规则，需要用到正则表达式的技术
+            var patt=/^\w{5,12}$/;
+            if (patt.test(text)){//test方法：用于测试某个字符串是否匹配正则，匹配返回true
+                usernamespan.innerHTML="<img src=\"right.png\" height=\"12\" width=\"12\"/>";
+            }
+            else
+                usernamespan.innerHTML="<img src=\"wrong.png\" height=\"12\" width=\"12\"/>";
+
+
+        }
+    </script>
+</head>
+<body>
+用户名：<input type="text" id="username"/>
+<span id="usernamespan"></span>
+<button onclick="onclickFunc()" >校验</button>
+
+
+</body>
+</html>

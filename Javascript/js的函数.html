@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    //定义无参函数
+    function fun1(){
+        alert("无参函数被调用了");
+    }
+    //函数调用才会执行
+    fun1();
+
+    //定义有参函数,形参列表不需要声明变量类型，只写变量名就行
+    function fun2(a,b){
+        alert("有参函数被调用了，a="+a+",b="+b);
+    }
+
+    fun2(12,"dafdsf");
+
+    //定义带有返回值的函数
+    function sum(a,b){
+        var result=a+b;
+        return result
+    }
+
+    //另一种定义函数的方式
+
+    alert(sum(100,2));
+    function fun(){
+        alert("无参函数");
+    }
+
+
+    //js中，函数不允许重载，会直接覆盖掉上一次定义的函数
+    function fun(a,b){
+        alert("不允许重载");
+    }
+    fun(1,2);
+
+    //js的函数即使定义为空参，也是可以传入参数的，js定义了一种叫隐形参数的变量
+    function fun(){
+        alert(arguments.length);//arguments就是隐形参数，和java中的Object...args类似，是数组形式
+    }
+    fun(1,2,2,2,2,2,3);//调用函数时传入参数，每个参数就会赋值给arguments[]相应的位置上
+
+    //定义一个函数，其功能是返回所有参数的和，参数的个数不确定，所以用隐形参数
+    function sum1(){
+        var sum=0;
+        for (var i=0;i<arguments.length;i++){
+            sum+=arguments[i];
+        }
+        return sum;
+    }
+
+    alert(sum1(123,454,634,2,6,2,3));
+</script>
+
+</body>
+</html>

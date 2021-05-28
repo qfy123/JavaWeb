@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    <?xml version="1.0" encoding="UTF-8" ?>
+    上面这段话就是xml的声明
+    version="1.0"   表示xml的版本
+    encoding="UTF-8"    表示xml文件本身的编码
+-->
+<books><!--books表示多个图书信息-->
+    <book sn="SN12312312312123"><!--book表示一个图书信息，sn属性表示图书序列号-->
+        <name>时间简史</name>
+        <author>霍金</author>
+        <price>75.00</price>
+    </book>
+    <book>
+        <!--cdata语法：可以告诉xml解析器，cdata里面的文本内容，不需要解析
+            格式：<![CDATA[**这里放文本**]]>-->
+        <name><![CDATA[<<<<>>>>>>]]></name>
+    </book>
+</books>

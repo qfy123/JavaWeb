@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+     /*   在Javascript中，所有的变量都可以当成布尔类型的变量使用
+        0、null、undefined、空串都认为是false*/
+
+     // var a=0;
+     // if (a)
+     //     alert("0为真");
+     // else
+     //     alert("0为假");
+
+    /*
+    * && 且运算有两种情况
+    * 第一种：当表达式全为真的时候，返回最后一个表达式的值
+    * 第二种：当表达式有一个假的时候，返回第一个为假的表达式的值
+    * */
+
+     var a="abc";
+     var b=true;
+     var d=false;
+     var c=null;
+
+     alert(a&&b);//true
+     alert(b&&a);//abc
+     alert(a&&d);//false
+     alert(c&&d);//null
+     alert(d&&c);//false
+
+     /*
+     * || 或运算有两种情况
+     * 第一种：当表达式全为假时，返回最后一个为假的表达式的值
+     * 第二种：当有一个表达式为真时，返回第一个为真的表达式的值*/
+    </script>
+</head>
+<body>
+
+</body>
+</html>

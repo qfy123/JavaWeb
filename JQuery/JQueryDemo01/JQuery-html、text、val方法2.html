@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="script/jquery-1.7.2.js"></script>
+    <script>
+        $(function (){
+            // alert($("div").html());//获取起始标签和结束标签中的内容，相当于dom的innerHTML方法
+            // $("div").html("<h1>我是div中的标题</h1>");
+            // alert($("div").text());//获取起始标签和结束标签中的文本，相当于dom的innerTEXT方法
+            // $("div").text("<h1>我是div中的标题</h1>");
+
+            /*$(":radio").val(["radio1"]);//设置单选框
+            $(":checkbox").val(["checkbox1","checkbox3"])//批量操作多选框
+            $("#multiple").val(["mul1","mul3"])//批量操作下拉多选
+            $("#single").val("sin2")//设置下拉单选
+            */
+
+            //一次性操作所有的
+            $(":radio,:checkbox,#multiple,#single").val(["radio2","checkbox1","checkbox3","mul2","mul3","mul4","sin3"])
+
+        })
+    </script>
+</head>
+<body>
+    单选：
+    <input name="radio" type="radio" value="radio1"/>radio1
+    <input name="radio" type="radio" value="radio2"/>radio2
+    <br/>
+    多选：
+    <input name="checkbox" type="checkbox" value="checkbox1"/>checkbox1
+    <input name="checkbox" type="checkbox" value="checkbox2"/>checkbox2
+    <input name="checkbox" type="checkbox" value="checkbox3"/>checkbox3
+    下拉多选：
+    <select id="multiple" multiple="multiple" size="4">
+        <option value="mul1">mul1</option>
+        <option value="mul2">mul2</option>
+        <option value="mul3">mul3</option>
+        <option value="mul4">mul4</option>
+    </select>
+    <br/>
+    下拉单选：
+    <select id="single">
+        <option value="sin1">sin1</option>
+        <option value="sin2">sin2</option>
+        <option value="sin3">sin3</option>
+    </select>
+</body>
+</html>

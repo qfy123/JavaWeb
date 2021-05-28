@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="script/jquery-1.7.2.js"></script>
+    <script>
+        $(function (){
+            // alert($("div").html());//获取起始标签和结束标签中的内容，相当于dom的innerHTML方法
+            // $("div").html("<h1>我是div中的标题</h1>");
+            // alert($("div").text());//获取起始标签和结束标签中的文本，相当于dom的innerTEXT方法
+            // $("div").text("<h1>我是div中的标题</h1>");
+            alert($("#username").val());
+            $("#username").val("修改一下");
+
+        })
+    </script>
+</head>
+<body>
+    <div>我是div <span>我是div中的span</span></div>
+    <input type="text" name="username" id="username" value="123123123"/>
+</body>
+</html>
